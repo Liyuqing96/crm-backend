@@ -2,9 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 const userRoutes = require('./users');
+const chat = require('./chat')
 
 // API版本前缀
 const API_PREFIX = '/api/v1';
+
+// 聊天API
+router.use(`${API_PREFIX}/chat`, chat);
 
 // 用户路由
 router.use(`${API_PREFIX}/users`, userRoutes);

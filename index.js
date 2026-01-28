@@ -10,7 +10,8 @@ const apiRoutes = require('./routes/api');
 
 // 中间件
 app.use(cors({
-  origin: 'http://www.julia-continuing.cn',
+  // origin: 'http://www.julia-continuing.cn',
+  origin: '*',
   credentials: true
 }));
 app.use(express.json()); // 解析JSON请求体
